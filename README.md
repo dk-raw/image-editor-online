@@ -1,2 +1,46 @@
-# image-editor-online
-Online Image Editor Powered by CCS 3.1
+# Image Editor Online
+
+Powerfully edit and export images online. Powered by the CSS 2.1 filter property
+
+## Technologies Used
+
+- Node.js → Server Runtime
+- TypeScript → JavaScript Superset
+- JavaScript → Client-Side Scripting
+- CSS 2.1 → Styling
+- Bootstrap 5 → Styling
+- Bootstrap Icons → SVG Icons
+- HTML → Website Building
+- Cloudflare → Caching, Protection and Analytics
+- Cloudflare Pages → Hosting
+- Git → Version Control
+- GitHub → Source Control
+
+## Clone Repository
+
+[Clone the repository in VS code](https://docs.microsoft.com/en-us/azure/developer/javascript/how-to/with-visual-studio-code/clone-github-repository)
+
+For the repository url enter `https://github.com/dk-raw/image-editor-online`
+
+## Run Locally
+
+Assuming you have [node.js](https://nodejs.org/en/download/) installed.
+
+In the terminal...
+
+1.  Type `npm i`
+2.  Type `npm start`
+
+## TypeScript Compilation
+
+Assuming you have [TypeScript](https://www.npmjs.com/package/typescript) installed.
+
+In the terminal...
+
+- Type `tsc` for one time compilation.
+  or
+- Type `tsc -w` for continuous compilation.
+
+## License
+
+- [MIT License](https://mit-license.org/)

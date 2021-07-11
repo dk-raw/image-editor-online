@@ -1,0 +1,41 @@
+{
+  "name": "Image Editor Online",
+  "short_name": "Image Editor",
+  "description": "Powerfully edit images or GIFs online",
+  "author": "Damian Katsios",
+  "developer": {
+    "name": "Damian Katsios",
+    "url": "https://dkatsios.ml"
+  },
+  "version": "0.2",
+  "manifest_version": 1,
+  "offline_enabled": false,
+  "default_locale": "en",
+  "start_url": "/",
+  "homepage_url": "https://image-editor.dkatsios.ml",
+  "icons": [
+    {
+      "src": "/assets/favicon.ico",
+      "sizes": "36x36"
+    },
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
