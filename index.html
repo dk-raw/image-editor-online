@@ -21,7 +21,7 @@
 <body>
     <div class="container-sm mt-4">
         <h1><i class="bi bi-card-image"></i> Online Image Editor</h1>
-        <p>Edit images online with a variety of filters. Powered by the filter property present in CSS 3</p>
+        <p>Edit images online with a variety of filters. Powered by the filter property present in CSS 2.1</p>
         <form class="my-4">
             <label for="formFile" class="form-label">Select an image or GIF to begin</label>
             <input class="form-control" accept="image/*" type="file" id="file" onchange="loadFile(event)">
@@ -50,9 +50,10 @@
                     <input type="range" class="form-range" id="sepia" default="0" value="0" oninput="Edit()" min="0">
 
                     <div class="text-center my-4">
-                        <button class="btn btn-outline-primary m-1" type="button" onclick="Download()"
-                            data-bs-toggle="tooltip" data-bs-placement="top" title="Download the edited image"><i
-                                class="bi bi-cloud-arrow-down"></i> Export Image</button>
+                        <button class="btn btn-outline-primary m-1" type="button" id="export-image-btn"
+                            onclick="Download()" disabled data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Download the edited image"><i class="bi bi-cloud-arrow-down"></i> Export
+                            Image</button>
                         <button class="btn btn-outline-danger m-1" type="button" id="reset-btn" data-bs-toggle="tooltip"
                             data-bs-placement="top" title="Reset the adjustments"><i class="bi bi-arrow-clockwise"></i>
                             Reset Sliders</button>
@@ -69,7 +70,10 @@
                 rel="noopener">Source Code</a>, <a href="mailto:damian@dkatsios.tk">Contact</a>
         </div>
     </div>
-    <script src="dist/index.js"></script>
+    <script src="dist/loadFile.js"></script>
+    <script src="dist/Edit.js"></script>
+    <script src="dist/Reset.js"></script>
+    <script src="dist/Download.js"></script>
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {

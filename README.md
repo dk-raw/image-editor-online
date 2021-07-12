@@ -1,6 +1,8 @@
 # Image Editor Online
 
-Powerfully edit and export images online. Powered by the CSS 2.1 filter property
+Powerfully edit and export images online. Powered by the CSS 2.1 filter property.
+
+_why don't you star it too?✨_
 
 ## Technologies Used
 
@@ -15,6 +17,7 @@ Powerfully edit and export images online. Powered by the CSS 2.1 filter property
 - Cloudflare Pages → Hosting
 - Git → Version Control
 - GitHub → Source Control
+- Visual Studio Code → Code Editor
 
 ## Clone Repository
 
@@ -40,6 +43,10 @@ In the terminal...
 - Type `tsc` for one time compilation.
   or
 - Type `tsc -w` for continuous compilation.
+
+## How to Contribute
+
+If you'd like to help the development of this project, I will constantly be leaving comments on the code with what needs to be fixed.
 
 ## License
 
