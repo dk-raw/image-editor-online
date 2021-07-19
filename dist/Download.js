@@ -12,7 +12,12 @@ const Download = () => {
     canvas.width = img.width;
     canvas.height = img.height;
     ctx.filter = `sepia(${sepia}%) brightness(${bright}%) contrast(${contrast}%) grayscale(${grayscale}%) saturate(${saturation}%) hue-rotate(${hue}deg)`;
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    try {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+    catch (error) {
+        alert(error);
+    }
     const dataURL = canvas.toDataURL('image/png');
     const link = document.createElement('a');
     link.download = 'output.png';
