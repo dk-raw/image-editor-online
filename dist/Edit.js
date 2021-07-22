@@ -1,6 +1,6 @@
 "use strict";
 const Edit = () => {
-    const img = document.getElementById('output');
+    const img = document.querySelector('#output');
     const sepia = parseFloat(document.querySelector('#sepia').value);
     const bright = parseFloat(document.querySelector('#brightness').value);
     const contrast = parseFloat(document.querySelector('#contrast').value);

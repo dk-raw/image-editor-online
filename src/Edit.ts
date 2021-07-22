@@ -1,5 +1,5 @@
 const Edit = () => {
-    const img: any = <HTMLImageElement>document.getElementById('output')!;
+    const img: any = <HTMLImageElement>document.querySelector('#output')!;
     const sepia: number = parseFloat((<HTMLInputElement>document.querySelector('#sepia')).value)!;
     const bright: number = parseFloat((<HTMLInputElement>document.querySelector('#brightness')).value)!;
     const contrast: number = parseFloat((<HTMLInputElement>document.querySelector('#contrast')).value)!;

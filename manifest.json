@@ -7,10 +7,11 @@
     "name": "Damian Katsios",
     "url": "https://dkatsios.ml"
   },
-  "version": "0.2",
+  "version": "1.0",
   "manifest_version": 1,
   "offline_enabled": false,
   "default_locale": "en",
+  "lang": "English",
   "start_url": "/",
   "homepage_url": "https://image-editor.dkatsios.ml",
   "icons": [
