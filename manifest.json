@@ -35,8 +35,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#FFFFFF",
+  "theme_color": "#0D6EFD",
   "background_color": "#FFFFFF",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait"
 }

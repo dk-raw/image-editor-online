@@ -11,8 +11,10 @@
     <meta name="google" content="notranslate" />
     <meta name="title" content="Free Online Image Editor">
     <meta name="Description" content="Easily and quickly edit images online for free!" />
-    <meta name="Keywords" content="free online image editor jpg png gif convert image converter contrast saturation sepia brightness hue grayscale blur crop resize download export">
+    <meta name="Keywords"
+        content="free online image editor jpg png gif convert image converter contrast saturation sepia brightness hue grayscale blur crop resize download export">
     <meta name="author" content="Damian Katsios" />
+    <meta name="theme-color" content="#0D6EFD">
     <meta property="og:title" content="Online Image Editor" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://image-editor.dkatsios.ml" />
@@ -20,10 +22,10 @@
     <meta property="og:site_name" content="Free Online Image Editor" />
     <meta property="og:description" content="Easily and quickly edit images online for free!" />
     <meta property="og:locale" content="en_US" />
-    <meta name="twitter:card" content="summary_large_image"> 
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Free Online Image Editor" />
     <meta name="twitter:description" content="Easily and quickly edit images online for free!" />
-    <meta name="twitter:image" content="https://image-editor.dkatsios.ml/assets/android-chrome-192x192.png"> 
+    <meta name="twitter:image" content="https://image-editor.dkatsios.ml/assets/android-chrome-192x192.png">
     <meta name="twitter:site" content="@ddkatsios">
     <meta name="twitter:creator" content="@ddkatsios">
     <meta name="twitter:image:src" content="https://image-editor.dkatsios.ml/assets/android-chrome-192x192.png">
@@ -32,8 +34,10 @@
     <link rel="home" href="https://image-editor.dkatsios.ml">
     <link rel="canonical" href="https://image-editor.dkatsios.ml">
     <link rel="icon" href="https://image-editor.dkatsios.ml/assets/favicon.ico">
-    <link rel="icon" type="image/png" href="https://image-editor.dkatsios.ml/assets/android-chrome-192x192.png" sizes=192x192>
-    <link rel="icon" type="image/png" href="https://image-editor.dkatsios.ml/assets/android-chrome-256x256.png" sizes=256x256>
+    <link rel="icon" type="image/png" href="https://image-editor.dkatsios.ml/assets/android-chrome-192x192.png"
+        sizes=192x192>
+    <link rel="icon" type="image/png" href="https://image-editor.dkatsios.ml/assets/android-chrome-256x256.png"
+        sizes=256x256>
     <link rel="apple-touch-icon" sizes="180x180" href="https://image-editor.dkatsios.ml/assets/apple-touch-icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -41,6 +45,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <meta name="google-site-verification" content="U4gBJvr5HgBdRfu3vdW7EcSEqh9A2TUILHHt7ulAp6E" />
 </head>
 
 <body>
@@ -48,7 +53,7 @@
         <h1><i class="bi bi-card-image"></i> Free Online Image Editor</h1>
         <p>Easily and quickly edit, resize and crop images online for free!</p>
         <form class="my-4">
-            <label for="formFile" class="form-label">Select an image or GIF to begin</label>
+            <label for="file" class="form-label">Select an image or GIF to begin</label>
             <input class="form-control" accept="image/*" type="file" id="file" onchange="loadFile(event)">
         </form>
         <div class="row gap-2">
@@ -67,7 +72,7 @@
                     <label for="grayscale" class="form-label">Gray Scale</label>
                     <input type="range" class="form-range" id="grayscale" value="0" oninput="Edit()" min="0">
 
-                    <label for="bightness" class="form-label">Brightness</label>
+                    <label for="brightness" class="form-label">Brightness</label>
                     <input type="range" class="form-range" id="brightness" value="100" oninput="Edit()" min="1"
                         max="200">
 
@@ -86,7 +91,7 @@
                 </form>
             </div>
             <div class="col-lg">
-                <img id="output" width="100%" class="rounded mb-4" />
+                <img id="output" width="100%" class="rounded mb-4 d-none" alt="your image" />
             </div>
         </div>
         <div class="text-center my-4">
@@ -107,6 +112,17 @@
         window.addEventListener("load", () => {
             document.querySelector('#export-image-btn').disabled = true;
         });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./serviceworker.js')
+                    .then((reg) => console.log('Success: ', reg.scope))
+                    .catch((err) => console.log('Error: ', err));
+            });
+        } else {
+            console.log('Service worker is not supported in this browser');
+        }
     </script>
 </body>
 
