@@ -6,5 +6,8 @@ const Edit = () => {
     const grayscale: number = parseFloat((<HTMLInputElement>document.querySelector('#grayscale')).value)!;
     const saturation: number = parseFloat((<HTMLInputElement>document.querySelector('#saturation')).value)!;
     const hue: number = parseFloat((<HTMLInputElement>document.querySelector('#hue')).value)!;
-    img.style.filter = `sepia(${sepia}%) brightness(${bright}%) contrast(${contrast}%) grayscale(${grayscale}%) saturate(${saturation}%) hue-rotate(${hue}deg)`
+    const invert: number = parseFloat((<HTMLInputElement>document.querySelector('#invert')).value)!;
+    const blur: number = parseFloat((<HTMLInputElement>document.querySelector('#blur')).value)!;
+    const opacity: number = parseFloat((<HTMLInputElement>document.querySelector('#opacity')).value)!;
+    img.style.filter = `sepia(${sepia}%) brightness(${bright}%) contrast(${contrast}%) grayscale(${grayscale}%) saturate(${saturation}%) hue-rotate(${hue}deg) invert(${invert}%) blur(${blur}px) opacity(${opacity}%)`
 }

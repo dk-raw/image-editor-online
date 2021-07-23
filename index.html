@@ -53,7 +53,7 @@
         <h1><i class="bi bi-card-image"></i> Free Online Image Editor</h1>
         <p>Easily and quickly edit, resize and crop images online for free!</p>
         <form class="my-4">
-            <label for="file" class="form-label">Select an image or GIF to begin</label>
+            <label for="file" class="form-label">Select or drag and drop an image or GIF to begin</label>
             <input class="form-control" accept="image/*" type="file" id="file" onchange="loadFile(event)">
         </form>
         <div class="row gap-2">
@@ -69,6 +69,9 @@
                     <label for="hue" class="form-label">Hue</label>
                     <input type="range" class="form-range" id="hue" value="0" oninput="Edit()" min="0" max="360">
 
+                    <label for="invert" class="form-label">Invert</label>
+                    <input type="range" class="form-range" id="invert" value="0" oninput="Edit()" min="0" max="100">
+
                     <label for="grayscale" class="form-label">Gray Scale</label>
                     <input type="range" class="form-range" id="grayscale" value="0" oninput="Edit()" min="0">
 
@@ -78,6 +81,12 @@
 
                     <label for="sepia" class="form-label">Sepia</label>
                     <input type="range" class="form-range" id="sepia" default="0" value="0" oninput="Edit()" min="0">
+
+                    <label for="blur" class="form-label">Blur</label>
+                    <input type="range" class="form-range" id="blur" default="0" value="0" oninput="Edit()" min="0" max="25">
+
+                    <label for="opacity" class="form-label">Opacity</label>
+                    <input type="range" class="form-range" id="opacity" default="100" value="100" oninput="Edit()" min="0" max="100">
 
                     <div class="text-center my-4">
                         <button class="btn btn-outline-primary m-1" type="button" disabled id="export-image-btn"

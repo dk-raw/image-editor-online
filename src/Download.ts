@@ -6,15 +6,18 @@ const Download = () => {
     const grayscale: number = parseFloat((<HTMLInputElement>document.querySelector('#grayscale')).value)!;
     const saturation: number = parseFloat((<HTMLInputElement>document.querySelector('#saturation')).value)!;
     const hue: number = parseFloat((<HTMLInputElement>document.querySelector('#hue')).value)!;
+    const invert: number = parseFloat((<HTMLInputElement>document.querySelector('#invert')).value)!;
+    const blur: number = parseFloat((<HTMLInputElement>document.querySelector('#blur')).value)!;
+    const opacity: number = parseFloat((<HTMLInputElement>document.querySelector('#opacity')).value)!;
     const canvas: any = document.createElement('canvas');
     const ctx: any = canvas.getContext('2d');
-    canvas.width = img.width;
-    canvas.height = img.height;
-    ctx.filter = `sepia(${sepia}%) brightness(${bright}%) contrast(${contrast}%) grayscale(${grayscale}%) saturate(${saturation}%) hue-rotate(${hue}deg)`;
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    ctx.filter = `sepia(${sepia}%) brightness(${bright}%) contrast(${contrast}%) grayscale(${grayscale}%) saturate(${saturation}%) hue-rotate(${hue}deg) invert(${invert}%) blur(${blur}px) opacity(${opacity}%)`;
     try {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     } catch (error) {
-        alert(error);
+        alert('Error: ' + error);
     }
     const dataURL: any = canvas.toDataURL('image/png');
     const link: any = document.createElement('a');

@@ -1,0 +1,7 @@
+{
+    "port": 42069,
+    "server": { 
+        "baseDir": "./",
+        "routes": { "./node_modules": "node_modules" }
+    }
+}
