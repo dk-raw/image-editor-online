@@ -45,6 +45,12 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        ::selection {
+            background-color: #0D6EFD;
+            color: white;
+        }
+    </style>
     <meta name="google-site-verification" content="U4gBJvr5HgBdRfu3vdW7EcSEqh9A2TUILHHt7ulAp6E" />
 </head>
 
@@ -83,10 +89,12 @@
                     <input type="range" class="form-range" id="sepia" default="0" value="0" oninput="Edit()" min="0">
 
                     <label for="blur" class="form-label">Blur</label>
-                    <input type="range" class="form-range" id="blur" default="0" value="0" oninput="Edit()" min="0" max="25">
+                    <input type="range" class="form-range" id="blur" default="0" value="0" oninput="Edit()" min="0"
+                        max="25">
 
                     <label for="opacity" class="form-label">Opacity</label>
-                    <input type="range" class="form-range" id="opacity" default="100" value="100" oninput="Edit()" min="0" max="100">
+                    <input type="range" class="form-range" id="opacity" default="100" value="100" oninput="Edit()"
+                        min="0" max="100">
 
                     <div class="text-center my-4">
                         <button class="btn btn-outline-primary m-1" type="button" disabled id="export-image-btn"

@@ -21,7 +21,7 @@ const Download = () => {
     }
     const dataURL: any = canvas.toDataURL('image/png');
     const link: any = document.createElement('a');
-    link.download = 'output.png';
+    link.download = 'edited.png';
     link.href = dataURL;
     link.click();
 }
