@@ -1,5 +1,6 @@
 const Download = () => {
     const img: any = <HTMLImageElement>document.getElementById('output')!;
+    const fileName: string = localStorage.getItem('temp-file-name') || 'image-editor.dkatsios.ml';
     const sepia: number = parseFloat((<HTMLInputElement>document.querySelector('#sepia')).value)!;
     const bright: number = parseFloat((<HTMLInputElement>document.querySelector('#brightness')).value)!;
     const contrast: number = parseFloat((<HTMLInputElement>document.querySelector('#contrast')).value)!;
@@ -19,9 +20,13 @@ const Download = () => {
     } catch (error) {
         alert('Error: ' + error);
     }
-    const dataURL: any = canvas.toDataURL('image/png');
-    const link: any = document.createElement('a');
-    link.download = 'edited.png';
-    link.href = dataURL;
-    link.click();
+    try {
+        const dataURL: any = canvas.toDataURL('image/png');
+        const link: any = document.createElement('a');
+        link.download = `${fileName}-edited.png}`;
+        link.href = dataURL;
+        link.click();
+    } catch (error) {
+        alert('Error: ' + error);
+    }
 }

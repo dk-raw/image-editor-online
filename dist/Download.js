@@ -1,6 +1,7 @@
 "use strict";
 const Download = () => {
     const img = document.getElementById('output');
+    const fileName = localStorage.getItem('temp-file-name') || 'image-editor.dkatsios.ml';
     const sepia = parseFloat(document.querySelector('#sepia').value);
     const bright = parseFloat(document.querySelector('#brightness').value);
     const contrast = parseFloat(document.querySelector('#contrast').value);
@@ -21,9 +22,14 @@ const Download = () => {
     catch (error) {
         alert('Error: ' + error);
     }
-    const dataURL = canvas.toDataURL('image/png');
-    const link = document.createElement('a');
-    link.download = 'edited.png';
-    link.href = dataURL;
-    link.click();
+    try {
+        const dataURL = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.download = `${fileName}-edited.png}`;
+        link.href = dataURL;
+        link.click();
+    }
+    catch (error) {
+        alert('Error: ' + error);
+    }
 };
