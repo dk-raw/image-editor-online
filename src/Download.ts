@@ -23,7 +23,7 @@ const Download = () => {
     try {
         const dataURL: any = canvas.toDataURL('image/png');
         const link: any = document.createElement('a');
-        link.download = `${fileName}-edited.png}`;
+        link.download = `${fileName}-edited.png`;
         link.href = dataURL;
         link.click();
     } catch (error) {
